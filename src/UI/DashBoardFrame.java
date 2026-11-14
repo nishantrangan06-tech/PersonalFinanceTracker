@@ -1,14 +1,22 @@
 package UI;
 
+//import models.User;
+import models.User;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DashBoardFrame extends JFrame
 {
+    private User user;
+
     JLabel addExp,showExp,addBud,showBud;
     JButton addExpBtn,showExpBtn,addBudBtn,showBudBtn;
-    public DashBoardFrame()
+    public DashBoardFrame(User u)
     {
+        this.user = u;
 
         getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
         /*addExp = new JLabel("Add Expences");
@@ -35,6 +43,21 @@ public class DashBoardFrame extends JFrame
         add(Box.createVerticalStrut(15));
         add(showBudBtn);
         add(Box.createVerticalStrut(15));
+
+        //button functions
+
+        ActionListener addExp = new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new AddExpencesUI(user);
+                //dispose();
+            }
+        };
+
+        addExpBtn.addActionListener(addExp);
+
 
         //defaults
         setSize(500, 500);

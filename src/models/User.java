@@ -56,11 +56,13 @@ public class User
 
     }
 
-    public void addExpense()
+    public void addExpense(double amount,String category,String description,String date)
     {
         Expenses E = new Expenses();
 
+        /* for Terminal
         //Amount,
+
         System.out.print("Enter your expense amount: ");
         double amount = sc.nextDouble();
         E.setAmount(amount);
@@ -76,9 +78,12 @@ public class User
         //date
         System.out.print("Enter the date(dd-mm-yyyy): ");
         String date = sc.next();
+        E.setDate(date);*/
+
+        E.setAmount(amount);
+        E.setCategory(category);
+        E.setDescription(description);
         E.setDate(date);
-
-
         expenses.add(E);
         System.out.println("Your expense has been added");
     }

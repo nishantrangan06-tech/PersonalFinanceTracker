@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class LoginFrame extends JFrame
 {
-    User user;
+    private User user;
 
     JLabel label;
     JTextField password;
@@ -31,7 +31,7 @@ public class LoginFrame extends JFrame
             {
                 if(user.logIn(user,password.getText()))
                 {
-                    new DashBoardFrame();
+                    new DashBoardFrame(user);
                     dispose();
                 }
             }
@@ -45,5 +45,10 @@ public class LoginFrame extends JFrame
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+    }
+
+    public User getUser()
+    {
+        return user;
     }
 }
