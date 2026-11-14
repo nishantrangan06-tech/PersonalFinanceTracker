@@ -1,4 +1,5 @@
 import models.User;
+import UI.*;
 import java.util.*;
 
 //import java.sql.SQLOutput;
@@ -16,7 +17,7 @@ public class Main
 
         //System.out.println(user.getName()+"\n"+user.getUserId()+"\n"+user.getPassword()+"\n");
 
-        do {
+        /*do {
             if (user.logIn(user)) {
                 System.out.println("Welcome, " + user.getName() + "\n\n");
 
@@ -62,6 +63,8 @@ public class Main
             {
                 System.out.println("Wrong Password");
             }
-        }while(true);
+        }while(true);*/
+
+        LoginFrame lf = new LoginFrame(user);
     }
 }

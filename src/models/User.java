@@ -40,11 +40,11 @@ public class User
         return password;
     }
 
-    public boolean logIn(User u)
+    public boolean logIn(User u,String pass)
     {
-        System.out.print("Enter your password: ");
-        String pass = sc.next();
-        sc.nextLine();
+        //System.out.print("Enter your password: ");
+        //String pass = sc.next();
+        //sc.nextLine();
         if((u.getPassword()).equals(pass))
         {
             return true;
