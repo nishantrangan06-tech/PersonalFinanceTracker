@@ -10,43 +10,58 @@ public class Main
         Scanner sc = new Scanner(System.in);
         User user = new User();
 
-        user.setUserId(101);
-        user.setName("Nishant Rangan");
-        user.setPassword("Nish@204");
+        user.setUserId(000);
+        user.setName("Admin");
+        user.setPassword("01234");
 
-        System.out.println(user.getName()+"\n"+user.getUserId()+"\n"+user.getPassword()+"\n");
+        //System.out.println(user.getName()+"\n"+user.getUserId()+"\n"+user.getPassword()+"\n");
 
-        while(true)
-        {
+        do {
+            if (user.logIn(user)) {
+                System.out.println("Welcome, " + user.getName() + "\n\n");
 
-            System.out.println("1.Add Expense\n" +
-                    "2.Show Expenses\n" +
-                    "3.Add Budget\n" +
-                    "4.Show Budget\n" +
-                    "5.Exit");
-            System.out.print("Enter your choice: ");
-            int choice = sc.nextInt();
+                while (true)
+                {
 
-            switch (choice) {
+                    System.out.println("1.Add Expense\n" +
+                            "2.Show Expenses\n" +
+                            "3.Add Budget\n" +
+                            "4.Show Budget\n" +
+                            "5.Exit");
+                    System.out.print("Enter your choice: ");
+                    int choice = sc.nextInt();
 
-                case 1:
-                    user.addExpense();break;
+                    switch (choice)
+                    {
 
-                case 2:
-                    user.showExpenses();break;
+                        case 1:
+                            user.addExpense();
+                            break;
 
-                case 3:
-                    user.addBudget();break;
+                        case 2:
+                            user.showExpenses();
+                            break;
 
-                case 4:
-                    user.showBudget();break;
+                        case 3:
+                            user.addBudget();
+                            break;
 
-                case 5:
-                    System.out.println("Exiting\n");
-                    System.exit(0);
-                default:
-                    System.out.println("Invlaid choice");
+                        case 4:
+                            user.showBudget();
+                            break;
+
+                        case 5:
+                            System.out.println("Exiting\n");
+                            System.exit(0);
+                        default:
+                            System.out.println("Invlaid choice");
+                    }
+                }
             }
-        }
+            else
+            {
+                System.out.println("Wrong Password");
+            }
+        }while(true);
     }
 }

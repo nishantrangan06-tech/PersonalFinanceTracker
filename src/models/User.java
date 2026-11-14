@@ -40,6 +40,22 @@ public class User
         return password;
     }
 
+    public boolean logIn(User u)
+    {
+        System.out.print("Enter your password: ");
+        String pass = sc.next();
+        sc.nextLine();
+        if((u.getPassword()).equals(pass))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
     public void addExpense()
     {
         Expenses E = new Expenses();

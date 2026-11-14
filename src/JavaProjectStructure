@@ -1,0 +1,21 @@
+src/
+
+├── model/
+│   ├── User.java
+│   ├── Expense.java
+│   └── Budget.java
+│
+├── database/
+│   └── DBConnection.java
+│
+├── ui/
+│   ├── LoginFrame.java
+│   ├── DashboardFrame.java
+│   ├── ExpenseFrame.java
+│   └── ReportFrame.java
+│
+├── service/
+│   ├── ExpenseService.java
+│   └── ReportService.java
+│
+└── Main.java
