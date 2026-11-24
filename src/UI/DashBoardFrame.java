@@ -27,7 +27,7 @@ public class DashBoardFrame extends JFrame
         addExpBtn = new JButton("Add Expences");
         showExpBtn = new JButton("Show All Expences");
         addBudBtn = new JButton("Add Budget");
-        showBudBtn = new JButton("Show All Expences");
+        showBudBtn = new JButton("Show All Budget");
 
         addExpBtn.setAlignmentX(Component.CENTER_ALIGNMENT);
         showExpBtn.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -56,7 +56,38 @@ public class DashBoardFrame extends JFrame
             }
         };
 
+        ActionListener addBud = new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new AddBudgetUI(user);
+                //dispose();
+            }
+        };
+
+        ActionListener showExp = new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new showExpenseUI(user);
+            }
+        };
+
+        ActionListener showBud = new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                new showBudgetUI(user);
+            }
+        };
+
         addExpBtn.addActionListener(addExp);
+        addBudBtn.addActionListener(addBud);
+        showExpBtn.addActionListener(showExp);
+        showBudBtn.addActionListener(showBud);
 
 
         //defaults

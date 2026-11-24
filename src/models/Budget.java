@@ -2,7 +2,7 @@ package models;
 
 public class Budget
 {
-    private String category;
+    public String category;
     private double budgetLimit;
     private double remainingBudget;
 
@@ -16,7 +16,7 @@ public class Budget
         remainingBudget = budgetLimit - spentAmount;
     }
 
-    public void setCategory(String Category)
+    public void setCategory(String category)
     {
         this.category = category;
     }

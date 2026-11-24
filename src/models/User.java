@@ -9,8 +9,8 @@ public class User
     private int userId;
     private String name;
     private String password;
-    private ArrayList<Expenses> expenses = new ArrayList<>();
-    private ArrayList<Budget> budget = new ArrayList<>();
+    public ArrayList<Expenses> expenses = new ArrayList<>();
+    public ArrayList<Budget> budget = new ArrayList<>();
 
     //setters
     public void setUserId(int userId)
@@ -85,7 +85,7 @@ public class User
         E.setDescription(description);
         E.setDate(date);
         expenses.add(E);
-        System.out.println("Your expense has been added");
+        //System.out.println("Your expense has been added");
     }
 
     public void showExpenses()
@@ -106,23 +106,24 @@ public class User
     }
 
 
-    public void addBudget()
+    public void addBudget(String category,double budgetLimit)
     {
-        Budget b = new Budget();
+        Budget B = new Budget();
 
+        /*
         //category
         System.out.print("Enter your budget category: ");
         String category = sc.next();
-        b.setCategory(category);
-
         //budgetLimit
         System.out.print("Enter your your budgetLimit: ");
         double budgetLimit = sc.nextDouble();
-        b.setBudgetLimit(budgetLimit);
+         */
 
         //creating and adding budget
-        budget.add(b);
-        System.out.println("Your budget has been added");
+        B.setCategory(category);
+        B.setBudgetLimit(budgetLimit);
+        budget.add(B);
+        //System.out.println("Your budget has been added");
     }
 
     public void showBudget()
