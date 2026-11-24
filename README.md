@@ -160,15 +160,6 @@ Through this project, the team gained practical experience in:
 
 ---
 
-## Contributors
-
-- Your Name
-- Team Member 1
-- Team Member 2
-- Team Member 3
-
----
-
 ## License
 
 This project is developed for educational and academic purposes.
