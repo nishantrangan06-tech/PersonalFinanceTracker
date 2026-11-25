@@ -65,6 +65,7 @@ public class AddExpencesUI extends JFrame
                 String date = dateField.getText();
 
                 user.addExpense(amt,cat,desc,date);
+                user.remainingBudgetCalc(cat,amt);
 
                 amountField.setText("");
                 categoryField.setText("");
