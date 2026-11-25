@@ -85,6 +85,7 @@ public class User
         E.setDescription(description);
         E.setDate(date);
         expenses.add(E);
+
         //System.out.println("Your expense has been added");
     }
 
@@ -134,6 +135,17 @@ public class User
             System.out.println("Category: "+b.getCategory());
             System.out.println("Budget Limit: "+b.getBudgetLimit());
             System.out.println("Remaining Budget: "+b.getRemainingBudget());
+        }
+    }
+
+    public void remainingBudgetCalc(String Category,double spentAmount)
+    {
+        for(Budget B: budget)
+        {
+            if(Category.equals(B.getCategory()))
+            {
+                B.remainingBudget(spentAmount);
+            }
         }
     }
 }
